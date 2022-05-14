@@ -1,4 +1,4 @@
-# Project Title
+# Links/URL Shortener
 
 ## Table of Contents
 
@@ -6,9 +6,9 @@
 - [Getting Started](#getting_started)
 
 ## About <a name = "about"></a>
-####English
+#### English
 This is a link shortening site like [bitly](https://bitly.com/ "bitly"). It is also possible to view the statistics of clicks on links.
-####Russian
+#### Russian
 Это сайт для сокращения ссылок похожий на [bitly](https://bitly.com/ "bitly"). Есть возможность просматривать статистику переходов по ссылкам.
 
 ## Getting Started <a name = "getting_started"></a>
