@@ -6,6 +6,10 @@ body{
   color:black;
 }
 
+.t-red{
+  color:#A62000;
+}
+
 .main-title {
   font-size: 150%;
 }

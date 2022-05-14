@@ -18,6 +18,16 @@
   margin-top: 1ch;
 }
 
+/* Medium top margin */
+.m-t-m{
+  margin-top: 2ch;
+}
+
+/* Big top margin */
+.b-t-m{
+  margin-top: 4ch;
+}
+
 /* Small top padding */
 .s-t-p{
   padding-top: 1ch;

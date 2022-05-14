@@ -5,3 +5,9 @@
     <%= form.submit "Сократить", class: "button button-red" %>
   <% end %>
 </div>
+
+<% if flash[:url_m].present? %>
+  <div class="cont s-t-p s-b-p m-t-m">
+      <p class="main-title t-red">Url создан:<p class="main-title t-black"><%= flash[:url_m] %></p></p>
+  </div>
+<% end %>
