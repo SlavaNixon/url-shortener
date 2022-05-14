@@ -28,6 +28,11 @@
   margin-top: 4ch;
 }
 
+/* Small left margin */
+.s-l-m{
+  margin-left: 1ch;
+}
+
 /* Small top padding */
 .s-t-p{
   padding-top: 1ch;
@@ -40,6 +45,14 @@
 
 .w-40{
   width: 40%;
+}
+
+.m-r-20{
+  margin-right: 20%
+}
+
+.center{
+  text-align: center
 }
 
 body{

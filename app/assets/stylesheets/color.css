@@ -1,8 +1,8 @@
 body {
-  background-color: #024A68;
+  background: linear-gradient(to right, #63AFD0, #024A68);
 }
 
 .cont {
-  background-color: #539700;
+  background-color: #0278ff;
   margin-top: 0;
 }

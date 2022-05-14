@@ -1,0 +1,34 @@
+@media (max-width: 1134px) {
+  .m-r-20 {
+    margin-right: 0;
+  } 
+
+  .s-l-m {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  body{
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 512px) {
+  body{
+    margin-top: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 455px) {
+  body{
+    margin-top: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+    background: #0278ff;
+  }
+}
