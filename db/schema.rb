@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_14_034841) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_14_062213) do
   create_table "urls", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "stats"
+    t.integer "stats", default: 0
+    t.string "full_url"
+    t.string "small_url"
   end
 
 end

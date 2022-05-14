@@ -1,0 +1,43 @@
+/* Big bottom margin */
+.b-b-m {
+  margin-bottom: 4ch;
+}
+
+/* Medium bottom margin */
+.m-b-m {
+  margin-bottom: 2ch;
+}
+
+/* Small bottom margin */
+.s-b-m {
+  margin-bottom: 1ch;
+}
+
+/* Small top margin */
+.s-t-m{
+  margin-top: 1ch;
+}
+
+/* Small top padding */
+.s-t-p{
+  padding-top: 1ch;
+}
+
+/* Small bottom padding */
+.s-b-p{
+  padding-bottom: 1ch;
+}
+
+.w-40{
+  width: 40%;
+}
+
+body{
+  margin-top: 0;
+  margin-left: 20%;
+  margin-right: 20%
+}
+
+p{
+  margin: 0;
+}

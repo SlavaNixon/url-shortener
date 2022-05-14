@@ -1,0 +1,7 @@
+<div class="cont s-t-p s-b-p">
+  <%= form_with url: urls_url, method: :post, data: {turbo: false} do |form| %>
+    <%= form.label :full_url, "Введите полный url, который вы хотите сократить:", class:"main-title t-black" %>
+    <%= form.text_field :full_url, class: "w-40" %>
+    <%= form.submit "Сократить", class: "button button-red" %>
+  <% end %>
+</div>
