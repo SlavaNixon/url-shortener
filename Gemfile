@@ -7,6 +7,9 @@ gem "rails", "~> 7.0.1"
 # To hash url
 gem "crc32"
 
+# To parse url
+gem "domainatrix"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

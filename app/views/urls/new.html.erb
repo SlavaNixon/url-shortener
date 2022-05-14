@@ -8,6 +8,15 @@
 
 <% if flash[:url_m].present? %>
   <div class="cont s-t-p s-b-p m-t-m">
+      <% if flash[:info_m].present? %>
+        <p class="main-title t-black m-b-m"><%= flash[:info_m] %></p>
+      <% end %>
       <p class="main-title t-red">Url создан:<p class="main-title t-black"><%= flash[:url_m] %></p></p>
+  </div>
+<% end %>
+
+<% if flash[:error_m].present? %>
+  <div class="cont s-t-p s-b-p m-t-m">
+      <p class="main-title t-red"><%= flash[:error_m] %></p>
   </div>
 <% end %>

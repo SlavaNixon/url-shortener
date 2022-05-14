@@ -1,12 +1,12 @@
-body{
+body {
   font-family: 'Play', sans-serif;
 }
 
-.t-black{
+.t-black {
   color:black;
 }
 
-.t-red{
+.t-red {
   color:#A62000;
 }
 
@@ -14,6 +14,6 @@ body{
   font-size: 150%;
 }
 
-.s-title{
+.s-title {
   font-size: 125%;
 }
