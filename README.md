@@ -14,9 +14,9 @@ This is a link shortening site like [bitly](https://bitly.com/ "bitly"). It is a
 ## Getting Started <a name = "getting_started"></a>
 The active version of the site where you can try to shorten links is [here](https://cut-your-url.herokuapp.com/ "here").
 To start using the application (run a local server) you need: Ruby on Rails 7.0.1, Ruby 3.0.2, Bundler.
-####Windows
+#### Windows
 You can get all the necessary tools by downloading [RubyInstaller](https://rubyinstaller.org/ "RubyInstaller").
-####Linux
+#### Linux
 Good instruction is [here](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm "here").
 
 ### Installing
