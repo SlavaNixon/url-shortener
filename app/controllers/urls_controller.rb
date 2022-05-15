@@ -18,8 +18,9 @@ class UrlsController < ApplicationController
   # Create new url in DB
   def create
     full_url = params[:full_url]
+    find_ur_in_db = Url.find_by(full_url: parse_url(full_url))
 
-    unless Url.find_by(full_url: parse_url(full_url))
+    unless find_ur_in_db
       url_create = Url.create(full_url: full_url, small_url: create_small_url)
       
       if url_create.save
@@ -30,8 +31,8 @@ class UrlsController < ApplicationController
       end
     else
       flash[:info_m] = "Данная ссылка уже была создана(возможно в далёком-далёком прошлом и даже не Вами)"
-      flash[:url_m] = url_url(Url.find_by(full_url: parse_url(full_url)))
-      flash[:stats] = stats_url_path(url_create)
+      flash[:url_m] = url_url(find_ur_in_db)
+      flash[:stats] = stats_url_path(find_ur_in_db)
     end
     redirect_to root_url
   end
