@@ -31,6 +31,7 @@ class UrlsController < ApplicationController
     else
       flash[:info_m] = "Данная ссылка уже была создана(возможно в далёком-далёком прошлом и даже не Вами)"
       flash[:url_m] = url_url(Url.find_by(full_url: parse_url(full_url)))
+      flash[:stats] = stats_url_path(url_create)
     end
     redirect_to root_url
   end
