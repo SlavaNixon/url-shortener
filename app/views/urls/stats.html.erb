@@ -1,0 +1,20 @@
+<% if @url.present? %>
+  <div class="cont s-t-p s-b-p">
+    <p class="main-title t-black m-b-m line">
+      Полная ссылка:
+      <a style="color:#FF3100;" href=<%= @url.full_url %>><%= fa_stacked_icon "link", base: "square-o" %></a>
+      <div class="main-title t-red line"><%= fa_stacked_icon "copy", base: "square-o" %></div>
+    </p>
+
+    <p class="main-title t-black m-b-m line">
+      Краткая ссылка:
+      <a style="color:#FF3100;" href=<%= url_url(@url.small_url) %>><%= fa_stacked_icon "link", base: "square-o" %></a>
+      <div class="main-title t-red line"><%= fa_stacked_icon "copy", base: "square-o" %></div>
+    </p>
+
+    <p class="main-title t-black b-b-m">
+      Количество уникальных кликов по ссылке: <%= @url.stats %>
+    </p>
+    <p class="t-black">Совет: сохраните ссылку на статистику, чтобы не потерять</p>
+  </div>
+<% end %>

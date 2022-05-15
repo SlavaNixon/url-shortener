@@ -7,7 +7,11 @@ body {
 }
 
 .t-red {
-  color:red;
+  color:#FF3100;
+}
+
+.link-clear{
+  text-decoration: none;
 }
 
 .main-title {

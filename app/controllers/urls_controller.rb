@@ -3,9 +3,16 @@ class UrlsController < ApplicationController
   def new
   end
 
+  # Statistics
+  def stats
+    @url = Url.find_by(small_url: params[:small_url])
+  end
+
   # Show current url info
   def show
-    redirect_to Url.find_by(small_url: params[:small_url]).full_url, allow_other_host: true
+    url = Url.find_by(small_url: params[:small_url])
+    url.update(stats: url.stats + 1)
+    redirect_to url.full_url, allow_other_host: true
   end
 
   # Create new url in DB
@@ -17,6 +24,7 @@ class UrlsController < ApplicationController
       
       if url_create.save
         flash[:url_m] = url_url(url_create)
+        flash[:stats] = stats_url_path(url_create)
       else
         flash[:error_m] = "Что-то пошло не так, ссылка не создана("
       end

@@ -11,8 +11,11 @@
       <% if flash[:info_m].present? %>
         <p class="main-title t-black m-b-m"><%= flash[:info_m] %></p>
       <% end %>
-      <p class="main-title t-black">
+      <p class="main-title t-black m-b-s">
         Url создан: <a class="m-r-20 s-l-m" href=<%= flash[:url_m] %> class="s-title"><%= flash[:url_m] %></a>
+      </p>
+      <p class="main-title t-black">
+        <a href=<%= flash[:stats] %>>Статистика</a>
       </p>
   </div>
 <% end %>
