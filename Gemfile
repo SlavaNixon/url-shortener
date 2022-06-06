@@ -6,6 +6,7 @@ gem "rails", "~> 7.0.1"
 
 # To hash url
 gem "crc32"
+gem 'securerandom'
 
 # To nice icons
 gem "font-awesome-rails"

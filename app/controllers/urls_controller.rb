@@ -40,11 +40,7 @@ class UrlsController < ApplicationController
   private
 
   def create_small_url
-    if Url.last
-      Crc32.calculate(Url.last.id.to_s(16), Url.last.id.to_s(16).length, 0).to_s(16)
-    else
-      Crc32.calculate("0", 1, 0).to_s(16)
-    end
+    SecureRandom.alphanumeric(10)
   end
 
   def parse_url(url)

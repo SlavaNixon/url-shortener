@@ -27,7 +27,7 @@ Use `git clone` in command line being in desired directory.
 $ git clone https://github.com/SlavaNixon/url-shortener .
 ```
 
-After clone start `bundle`
+After clone start `bundle`.
 
 ```
 $ bundle
@@ -38,4 +38,4 @@ After installing gems you can start local server.
 ```
 $ bundle exec rails s
 ```
-Now you can open any browser and go to `http://127.0.0.1:3000` to use service
+Now you can open any browser and go to `http://127.0.0.1:3000` to use service.
