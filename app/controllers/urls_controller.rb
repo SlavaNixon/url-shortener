@@ -5,12 +5,12 @@ class UrlsController < ApplicationController
 
   # Statistics
   def stats
-    @url = Url.find_by(small_url: params[:small_url])
+    @url = Url.find_by!(small_url: params[:small_url])
   end
 
   # Show current url info
   def show
-    url = Url.find_by(small_url: params[:small_url])
+    url = Url.find_by!(small_url: params[:small_url])
     url.update(stats: url.stats + 1)
     redirect_to url.full_url, allow_other_host: true
   end

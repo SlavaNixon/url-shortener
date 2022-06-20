@@ -1,7 +1,7 @@
 <div class="cont s-t-p s-b-p">
   <%= form_with url: urls_url, method: :post, data: {turbo: false} do |form| %>
     <%= form.label :full_url, "Введите полный url, который вы хотите сократить:", class:"main-title t-black" %>
-    <%= form.text_field :full_url, class: "w-40" %>
+    <%= form.text_field :full_url, class: "w-100 form-control mb-2" %>
     <%= form.submit "Сократить", class: "button button-red" %>
   <% end %>
 </div>
@@ -12,10 +12,10 @@
         <p class="main-title t-black m-b-m"><%= flash[:info_m] %></p>
       <% end %>
       <p class="main-title t-black m-b-s">
-        Url создан: <a class="m-r-20 s-l-m" href=<%= flash[:url_m] %> class="s-title"><%= flash[:url_m] %></a>
+        Url создан: <a class="m-r-20 s-l-m text-info" href=<%= flash[:url_m] %> class="s-title"><%= flash[:url_m] %></a>
       </p>
       <p class="main-title t-black">
-        <a href=<%= flash[:stats] %>>Статистика</a>
+        <a class="text-info" href=<%= flash[:stats] %>>Статистика</a>
       </p>
   </div>
 <% end %>

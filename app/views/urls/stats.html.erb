@@ -1,20 +1,36 @@
-<% if @url.present? %>
-  <div class="cont s-t-p s-b-p">
-    <p class="main-title t-black m-b-m line">
-      Полная ссылка:
-      <a style="color:#FF3100;" href=<%= @url.full_url %>><%= fa_stacked_icon "link", base: "square-o" %></a>
-      <div class="main-title t-red line"><%= fa_stacked_icon "copy", base: "square-o" %></div>
-    </p>
+<div class="cont s-t-p s-b-p">
+  <p class="main-title t-black m-b-m line">
+    Полная ссылка:
+    <a style="color:#FF3100;" href=<%= @url.full_url %>><%= fa_stacked_icon "link", base: "square-o" %></a>
+    <div class="main-title t-red line copyFullUrl"><%= fa_stacked_icon "copy", base: "square-o" %></div>
+  </p>
 
-    <p class="main-title t-black m-b-m line">
-      Краткая ссылка:
-      <a style="color:#FF3100;" href=<%= url_url(@url.small_url) %>><%= fa_stacked_icon "link", base: "square-o" %></a>
-      <div class="main-title t-red line"><%= fa_stacked_icon "copy", base: "square-o" %></div>
-    </p>
+  <p class="main-title t-black m-b-m line">
+    Краткая ссылка:
+    <a style="color:#FF3100;" href=<%= url_url(@url.small_url) %>><%= fa_stacked_icon "link", base: "square-o" %></a>
+    <div class="main-title t-red line copySmallUrl"><%= fa_stacked_icon "copy", base: "square-o" %></div>
+  </p>
 
-    <p class="main-title t-black b-b-m">
-      Количество переходов по ссылке: <%= @url.stats %>
-    </p>
-    <p class="t-black">Совет: сохраните ссылку на статистику, чтобы не потерять</p>
-  </div>
-<% end %>
+  <p class="main-title t-black b-b-m">
+    Количество переходов по ссылке: <%= @url.stats %>
+  </p>
+  <p class="t-black">Совет: сохраните ссылку на статистику, чтобы не потерять</p>
+</div>
+
+<script>
+    document.querySelector('.copyFullUrl')
+    .addEventListener('click', function() {
+        var copyText = "<%= @url.full_url %>"
+        navigator.clipboard.writeText(copyText);
+        alert("URL скопирован")
+    })
+</script>
+
+<script>
+    document.querySelector('.copySmallUrl')
+    .addEventListener('click', function() {
+        var copyText = "<%= url_url(@url.small_url) %>"
+        navigator.clipboard.writeText(copyText);
+        alert("URL скопирован")
+    })
+</script>
