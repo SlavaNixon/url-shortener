@@ -18,22 +18,15 @@ class UrlsController < ApplicationController
   # Create new url in DB
   def create
     full_url = params[:full_url]
-    find_ur_in_db = Url.find_by(full_url: parse_url(full_url))
-
-    unless find_ur_in_db
-      url_create = Url.create(full_url: full_url, small_url: create_small_url)
-      
-      if url_create.save
-        flash[:url_m] = url_url(url_create)
-        flash[:stats] = stats_url_path(url_create)
-      else
-        flash[:error_m] = "Что-то пошло не так, ссылка не создана("
-      end
+    url_create = Url.create(full_url: full_url, small_url: create_small_url)
+    
+    if url_create.save
+      flash[:url_m] = url_url(url_create)
+      flash[:stats] = stats_url_path(url_create)
     else
-      flash[:info_m] = "Данная ссылка уже была создана(возможно в далёком-далёком прошлом и даже не Вами)"
-      flash[:url_m] = url_url(find_ur_in_db)
-      flash[:stats] = stats_url_path(find_ur_in_db)
+      flash[:error_m] = "Что-то пошло не так, ссылка не создана("
     end
+
     redirect_to root_url
   end
 
@@ -41,11 +34,5 @@ class UrlsController < ApplicationController
 
   def create_small_url
     SecureRandom.alphanumeric(10)
-  end
-
-  def parse_url(url)
-    parsed_url = Domainatrix.parse(url).url
-    parsed_url = "#{parsed_url}/" unless parsed_url.last == "/"
-    parsed_url
   end
 end
